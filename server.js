@@ -14,15 +14,15 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
-
+app.use(cors())
 // Allow specific origin and methods
-app.use(
-  cors({
-    origin: "https://elaborate-capybara-cee67b.netlify.app/", // Allow React app's origin
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://elaborate-capybara-cee67b.netlify.app/", // Allow React app's origin
+//     methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific methods
+//     allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
+//   })
+// );
 
 app.use(express.json());
 
